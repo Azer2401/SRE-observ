@@ -1,0 +1,151 @@
+site_name: 'SRE Observability'
+site_description: 'Main documentation for SRE Observability'
+repo_url: https://github.com/hernanta/sre-observability
+edit_uri: edit/main/docs
+
+#theme:
+#  logo: assets/logo.jpg
+#  favicon: images/favicon.jpg
+
+plugins:
+  - techdocs-core
+  - redirects:
+      redirect_maps:
+        'index.md': 'overview.md'
+
+nav:
+  - Home: index.md
+  - Overview:
+      - What is Observability?: 'overview/what-is-observability.md'
+      - Roadmap: 'overview/roadmap.md'
+  - Metrics:
+      - Architecture: 'metrics/architecture.md'
+      - Installation: 'metrics/installation.md'
+      - Configuration: 'metrics/configuration.md'
+      - Rules: 'metrics/rules.md'
+  - Logs:
+      - Pipeline: logs-pipeline.md
+      - Enrichment: logs-enrichment.md
+  - Traces: traces.md
+  - Alerting: alerting.md
+  - Dashboards: dashboards.md
+  - Runbooks:
+      - Alertmanager:
+          - Alertmanager Cluster Crashlooping: 'runbooks/alertmanager/AlertmanagerClusterCrashlooping.md'
+          - Alertmanager Cluster Down: 'runbooks/alertmanager/AlertmanagerClusterDown.md'
+          - Alertmanager Cluster Failed To Send Alerts: 'runbooks/alertmanager/AlertmanagerClusterFailedToSendAlerts.md'
+          - Alertmanager Config Inconsistent: 'runbooks/alertmanager/AlertmanagerConfigInconsistent.md'
+          - Alertmanager Failed Reload: 'runbooks/alertmanager/AlertmanagerFailedReload.md'
+          - Alertmanager Failed To Send Alerts: 'runbooks/alertmanager/AlertmanagerFailedToSendAlerts.md'
+          - Alertmanager Members Inconsistent: 'runbooks/alertmanager/AlertmanagerMembersInconsistent.md'
+      - Etcd:
+          - Etcd Backend Quota Low Space: 'runbooks/etcd/etcdBackendQuotaLowSpace.md'
+          - Etcd GRPC Requests Slow: 'runbooks/etcd/etcdGRPCRequestsSlow.md'
+          - Etcd High Fsync Durations: 'runbooks/etcd/etcdHighFsyncDurations.md'
+          - Etcd HighNumber Of Failed GRPC Requests: 'runbooks/etcd/etcdHighNumberOfFailedGRPCRequests.md'
+          - Etcd Insufficient Members: 'runbooks/etcd/etcdInsufficientMembers.md'
+          - Etcd Members Down: 'runbooks/etcd/etcdMembersDown.md'
+          - Etcd No Leader: 'runbooks/etcd/etcdNoLeader.md'
+      - General:
+          - Info Inhibitor: 'runbooks/general/InfoInhibitor.md'
+          - Node Network Interface Flapping: 'runbooks/general/NodeNetworkInterfaceFlapping.md'
+          - Target Down: 'runbooks/general/TargetDown.md'
+          - Watchdog: 'runbooks/general/Watchdog.md'
+      - Kubernetes:
+          - CPUThrottlingHigh: 'runbooks/kubernetes/CPUThrottlingHigh.md'
+          - Kube Aggregated API Down: 'runbooks/kubernetes/KubeAggregatedAPIDown.md'
+          - Kube Aggregated API Errors: 'runbooks/kubernetes/KubeAggregatedAPIErrors.md'
+          - Kube API Down: 'runbooks/kubernetes/KubeAPIDown.md'
+          - Kube API Error Budget Burn: 'runbooks/kubernetes/KubeAPIErrorBudgetBurn.md'
+          - Kube API Terminated Requests: 'runbooks/kubernetes/KubeAPITerminatedRequests.md'
+          - Kube Client Certificate Expiration: 'runbooks/kubernetes/KubeClientCertificateExpiration.md'
+          - Kube Client Errors: 'runbooks/kubernetes/KubeClientErrors.md'
+          - Kube Container Waiting: 'runbooks/kubernetes/KubeContainerWaiting.md'
+          - KubeControllerManager Down: 'runbooks/kubernetes/KubeControllerManagerDown.md'
+          - Kube CPU Overcommit: 'runbooks/kubernetes/KubeCPUOvercommit.md'
+          - Kube CPU Quota Overcommit: 'runbooks/kubernetes/KubeCPUQuotaOvercommit.md'
+          - Kube DaemonSet MisScheduled: 'runbooks/kubernetes/KubeDaemonSetMisScheduled.md'
+          - Kube DaemonSet Not Scheduled: 'runbooks/kubernetes/KubeDaemonSetNotScheduled.md'
+          - Kube DaemonSet Rollout Stuck: 'runbooks/kubernetes/KubeDaemonSetRolloutStuck.md'
+          - Kube Deployment Generation Mismatch: 'runbooks/kubernetes/KubeDeploymentGenerationMismatch.md'
+          - Kube Deployment Replicas Mismatch: 'runbooks/kubernetes/KubeDeploymentReplicasMismatch.md'
+          - Kube Hpa Maxed Out: 'runbooks/kubernetes/KubeHpaMaxedOut.md'
+          - Kube Hpa Replicas Mismatch: 'runbooks/kubernetes/KubeHpaReplicasMismatch.md'
+          - Kube Job Completion: 'runbooks/kubernetes/KubeJobCompletion.md'
+          - Kube Job Failed: 'runbooks/kubernetes/KubeJobFailed.md'
+          - Kubelet Client Certificate Expiration: 'runbooks/kubernetes/KubeletClientCertificateExpiration.md'
+          - Kubelet Client Certificate Renewal Errors: 'runbooks/kubernetes/KubeletClientCertificateRenewalErrors.md'
+          - Kubelet Down: 'runbooks/kubernetes/KubeletDown.md'
+          - Kubelet PlegDuration High: 'runbooks/kubernetes/KubeletPlegDurationHigh.md'
+          - Kubelet Pod Start Up Latency High: 'runbooks/kubernetes/KubeletPodStartUpLatencyHigh.md'
+          - Kubelet Server Certificate Expiration: 'runbooks/kubernetes/KubeletServerCertificateExpiration.md'
+          - Kubelet Server Certificate Renewal Errors: 'runbooks/kubernetes/KubeletServerCertificateRenewalErrors.md'
+          - Kubelet Too Many Pods: 'runbooks/kubernetes/KubeletTooManyPods.md'
+          - Kube Memory Overcommit: 'runbooks/kubernetes/KubeMemoryOvercommit.md'
+          - Kube Memory Quota Overcommit: 'runbooks/kubernetes/KubeMemoryQuotaOvercommit.md'
+          - Kube Node Not Ready: 'runbooks/kubernetes/KubeNodeNotReady.md'
+          - Kube Node Readiness Flapping: 'runbooks/kubernetes/KubeNodeReadinessFlapping.md'
+          - Kube Node Unreachable: 'runbooks/kubernetes/KubeNodeUnreachable.md'
+          - Kube Persistent Volume Errors: 'runbooks/kubernetes/KubePersistentVolumeErrors.md'
+          - Kube Persistent Volume Filling Up: 'runbooks/kubernetes/KubePersistentVolumeFillingUp.md'
+          - Kube Pod Crash Looping: 'runbooks/kubernetes/KubePodCrashLooping.md'
+          - Kube Pod Not Ready: 'runbooks/kubernetes/KubePodNotReady.md'
+          - KubeProxy Down: 'runbooks/kubernetes/KubeProxyDown.md'
+          - Kube Quota Almost Full: 'runbooks/kubernetes/KubeQuotaAlmostFull.md'
+          - Kube Quota Exceeded: 'runbooks/kubernetes/KubeQuotaExceeded.md'
+          - Kube Quota Fully Used: 'runbooks/kubernetes/KubeQuotaFullyUsed.md'
+          - Kube Scheduler Down: 'runbooks/kubernetes/KubeSchedulerDown.md'
+          - Kube Stateful Set Generation Mismatch: 'runbooks/kubernetes/KubeStatefulSetGenerationMismatch.md'
+          - Kube Stateful Set Replicas Mismatch: 'runbooks/kubernetes/KubeStatefulSetReplicasMismatch.md'
+          - Kube StatefulSet Update Not Rolled Out: 'runbooks/kubernetes/KubeStatefulSetUpdateNotRolledOut.md'
+          - Kube Version Mismatch: 'runbooks/kubernetes/KubeVersionMismatch.md'
+      - Kube State Metrics:
+          - Kube State Metrics List Errors: 'runbooks/kube-state-metrics/KubeStateMetricsListErrors.md'
+          - Kube State Metrics Sharding Mismatch: 'runbooks/kube-state-metrics/KubeStateMetricsShardingMismatch.md'
+          - Kube State Metrics Shards Missing: 'runbooks/kube-state-metrics/KubeStateMetricsShardsMissing.md'
+          - Kube State Metrics Watch Errors: 'runbooks/kube-state-metrics/KubeStateMetricsWatchErrors.md'
+      - Node:
+          - Node Clock Not Synchronising: 'runbooks/node/NodeClockNotSynchronising.md'
+          - Node Clock Skew Detected: 'runbooks/node/NodeClockSkewDetected.md'
+          - Node File Descriptor Limit: 'runbooks/node/NodeFileDescriptorLimit.md'
+          - Node File system Almost Out Of Files: 'runbooks/node/NodeFilesystemAlmostOutOfFiles.md'
+          - Node File system Almost Out Of Space: 'runbooks/node/NodeFilesystemAlmostOutOfSpace.md'
+          - Node File system Files Filling Up: 'runbooks/node/NodeFilesystemFilesFillingUp.md'
+          - Node File system Space Filling Up: 'runbooks/node/NodeFilesystemSpaceFillingUp.md'
+          - Node High Number Conntrack Entries Used: 'runbooks/node/NodeHighNumberConntrackEntriesUsed.md'
+          - Node Network Receive Errs: 'runbooks/node/NodeNetworkReceiveErrs.md'
+          - Node Network Transmit Errs: 'runbooks/node/NodeNetworkTransmitErrs.md'
+          - Node RAID Degraded: 'runbooks/node/NodeRAIDDegraded.md'
+          - Node RAID Disk Failure: 'runbooks/node/NodeRAIDDiskFailure.md'
+          - Node Text File Collector Scrape Error: 'runbooks/node/NodeTextFileCollectorScrapeError.md'
+      - Prometheus:
+          - Prometheus Bad Config: 'runbooks/prometheus/PrometheusBadConfig.md'
+          - Prometheus Duplicate Timestamps: 'runbooks/prometheus/PrometheusDuplicateTimestamps.md'
+          - Prometheus Error Sending Alerts To Any Alertmanager: 'runbooks/prometheus/PrometheusErrorSendingAlertsToAnyAlertmanager.md'
+          - Prometheus Error Sending Alerts To Some Alertmanagers: 'runbooks/prometheus/PrometheusErrorSendingAlertsToSomeAlertmanagers.md'
+          - Prometheus Label Limit Hit: 'runbooks/prometheus/PrometheusLabelLimitHit.md'
+          - Prometheus Missing Rule Evaluations: 'runbooks/prometheus/PrometheusMissingRuleEvaluations.md'
+          - Prometheus Not Connected To Alertmanagers: 'runbooks/prometheus/PrometheusNotConnectedToAlertmanagers.md'
+          - Prometheus Notification Queue Running Full: 'runbooks/prometheus/PrometheusNotificationQueueRunningFull.md'
+          - Prometheus Not Ingesting Samples: 'runbooks/prometheus/PrometheusNotIngestingSamples.md'
+          - Prometheus Out Of Order Timestamps: 'runbooks/prometheus/PrometheusOutOfOrderTimestamps.md'
+          - Prometheus Remote Storage Failures: 'runbooks/prometheus/PrometheusRemoteStorageFailures.md'
+          - Prometheus Remote Write Behind: 'runbooks/prometheus/PrometheusRemoteWriteBehind.md'
+          - Prometheus Remote Write Desired Shards: 'runbooks/prometheus/PrometheusRemoteWriteDesiredShards.md'
+          - Prometheus Rule Failures: 'runbooks/prometheus/PrometheusRuleFailures.md'
+          - Prometheus Target Limit Hit: 'runbooks/prometheus/PrometheusTargetLimitHit.md'
+          - Prometheus Target Sync Failure: 'runbooks/prometheus/PrometheusTargetSyncFailure.md'
+          - Prometheus TSDB Compactions Failing: 'runbooks/prometheus/PrometheusTSDBCompactionsFailing.md'
+          - Prometheus TSDB Reloads Failing: 'runbooks/prometheus/PrometheusTSDBReloadsFailing.md'
+      - Prometheus Operator:
+          - Config Reloader Sidecar Errors: 'runbooks/prometheus-operator/ConfigReloaderSidecarErrors.md'
+          - Prometheus Operator List Errors: 'runbooks/prometheus-operator/PrometheusOperatorListErrors.md'
+          - Prometheus Operator Node Lookup Errors: 'runbooks/prometheus-operator/PrometheusOperatorNodeLookupErrors.md'
+          - Prometheus Operator Not Ready: 'runbooks/prometheus-operator/PrometheusOperatorNotReady.md'
+          - Prometheus Operator Reconcile Errors: 'runbooks/prometheus-operator/PrometheusOperatorReconcileErrors.md'
+          - Prometheus Operator Rejected Resources: 'runbooks/prometheus-operator/PrometheusOperatorRejectedResources.md'
+          - Prometheus Operator Sync Failed: 'runbooks/prometheus-operator/PrometheusOperatorSyncFailed.md'
+          - Prometheus Operator Watch Errors: 'runbooks/prometheus-operator/PrometheusOperatorWatchErrors.md'
+  - Security & Access: security.md
+  - Testing & Validation: testing.md
+  - Glossary: glossary.md
