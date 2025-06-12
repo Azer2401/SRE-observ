@@ -4,6 +4,7 @@ metadata:
   name: SRE-observ
   annotations:
     github.com/project-slug: Azer2401/SRE-observ
+    backstage.io/techdocs-ref: dir:.
 spec:
   type: other
   lifecycle: unknown
