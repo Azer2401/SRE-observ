@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: SRE-observ
+  annotations:
+    github.com/project-slug: Azer2401/SRE-observ
+spec:
+  type: other
+  lifecycle: unknown
+  owner: Muhammad Reza Azhar Priyadi
