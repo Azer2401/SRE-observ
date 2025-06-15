@@ -6,6 +6,6 @@ metadata:
     github.com/project-slug: Azer2401/SRE-observ
     backstage.io/techdocs-ref: dir:.
 spec:
-  type: other
-  lifecycle: unknown
-  owner: Muhammad Reza Azhar Priyadi
+  type: product
+  lifecycle: development
+  owner: SRE
